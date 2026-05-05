@@ -1,0 +1,1710 @@
+{
+  "name": "英语启蒙",
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "1855906393639501825",
+      "name": "家人",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "dad",
+			"my_word": "爸爸",
+			"description": "",
+			"audio": "73a98a6491ffee12d88160b055ea1093.mp3",
+			"image": "爸爸_1734498267665.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "mom",
+			"my_word": "妈妈",
+			"description": "",
+			"audio": "927345299c03afe82c129d164c0658c1.mp3",
+			"image": "妈妈_1734498255214.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "grandpa",
+			"my_word": "爷爷",
+			"description": "",
+			"audio": "b921904fad1b819dd01be5926384c063.mp3",
+			"image": "爷爷_1734498235406.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "grandma",
+			"my_word": "奶奶",
+			"description": "",
+			"audio": "52832ef6f36a3435a26f278f382b2876.mp3",
+			"image": "奶奶_1734498219843.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "grandpa",
+			"my_word": "外公",
+			"description": "",
+			"audio": "b921904fad1b819dd01be5926384c063.mp3",
+			"image": "外公_1734498208610.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "grandmother",
+			"my_word": "外婆",
+			"description": "",
+			"audio": "0c55f5357d8f5b133eaa8bf250310110.mp3",
+			"image": "外婆_1734498195792.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "brother",
+			"my_word": "哥哥",
+			"description": "",
+			"audio": "3ed89e7344b9ebb3cb0b19ea2334b979.mp3",
+			"image": "哥哥_1734498181752.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sister",
+			"my_word": "姐姐",
+			"description": "",
+			"audio": "ce5a001465c13df65689226927092c15.mp3",
+			"image": "姐姐_1734498168183.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "younger brother",
+			"my_word": "弟弟",
+			"description": "",
+			"audio": "a20c33896c89ba0c9b9404c0c13b4471.mp3",
+			"image": "弟弟_1734498155261.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "younger sister",
+			"my_word": "妹妹",
+			"description": "",
+			"audio": "8ae2c2f1858edb90cfd8500bd2404ded.mp3",
+			"image": "妹妹_1734498141032.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "uncle",
+			"my_word": "叔叔",
+			"description": "",
+			"audio": "a8031ac0819db2a97ca079f246b7dbc5.mp3",
+			"image": "叔叔_1734498338446.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "aunt",
+			"my_word": "姨妈",
+			"description": "",
+			"audio": "3a1eb81f44faa0a9bc3ecc54ef4ce486.mp3",
+			"image": "姨妈_1734498306570.png"
+		  }
+		]
+    },
+    {
+      "id": "1859184247781433346",
+      "name": "身体",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "head",
+			"my_word": "头",
+			"description": "",
+			"audio": "9c68c1c04d02d8d760a42b909ad93764.mp3",
+			"image": "head.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "face",
+			"my_word": "脸",
+			"description": "",
+			"audio": "ad9f35aecd17a0613306fb60d5bedf36.mp3",
+			"image": "face.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Ears",
+			"my_word": "耳朵",
+			"description": "",
+			"audio": "6bf0a659e63e773d6a082e43e46b7189.mp3",
+			"image": "ear.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "eye",
+			"my_word": "眼睛",
+			"description": "",
+			"audio": "3c2965e381e37152996262007ebe9baa.mp3",
+			"image": "eye.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "nose",
+			"my_word": "鼻子",
+			"description": "",
+			"audio": "136085c69589ea29a97001431de95854.mp3",
+			"image": "nose.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "mouth",
+			"my_word": "嘴",
+			"description": "",
+			"audio": "de2c0cb34905cb9385850fae75ccdee1.mp3",
+			"image": "mouth.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "tooth",
+			"my_word": "牙齿",
+			"description": "",
+			"audio": "68c0160cf319d3b10f998b1bd30ea340.mp3",
+			"image": "tooth.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "tongue",
+			"my_word": "舌头",
+			"description": "",
+			"audio": "989849f88c246bfc0bdd6438ace037bc.mp3",
+			"image": "tongue.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Hair",
+			"my_word": "头发",
+			"description": "",
+			"audio": "181d5e6215bf41096137d67db321e4c7.mp3",
+			"image": "hair.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "eyebrow",
+			"my_word": "眉毛",
+			"description": "",
+			"audio": "ee006e8e5c9802a95d3352860d8eec9f.mp3",
+			"image": "eyebrow.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "chin",
+			"my_word": "下巴",
+			"description": "",
+			"audio": "6ab3973f1f425b941cf428b4f135386e.mp3",
+			"image": "下巴_1734327930229.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "eyelash",
+			"my_word": "睫毛",
+			"description": "",
+			"audio": "f121b0231d8a9d8a22bda5550a1f1924.mp3",
+			"image": "睫毛_1734327913453.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "forehead",
+			"my_word": "额头",
+			"description": "",
+			"audio": "2025-12-30-102311_112696.mp3",
+			"image": "额头_1734327831118.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "hand",
+			"my_word": "手",
+			"description": "",
+			"audio": "715d060b37191d84bdbff8606b401327.mp3",
+			"image": "hand.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Arm",
+			"my_word": "手臂",
+			"description": "",
+			"audio": "203a4c3bebc44325fc5493945101a142.mp3",
+			"image": "arm.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "finger",
+			"my_word": "手指",
+			"description": "",
+			"audio": "7435d4dc52890a66e3406916c7e42fde.mp3",
+			"image": "手指_1734327775328.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "shoulder",
+			"my_word": "肩膀",
+			"description": "",
+			"audio": "13969faf538596ebdfaf6ba1cc704f5e.mp3",
+			"image": "shoulder.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Back",
+			"my_word": "背",
+			"description": "",
+			"audio": "0b7c194874b34377a08690faa971ab8d.mp3",
+			"image": "back.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "belly",
+			"my_word": "肚子",
+			"description": "",
+			"audio": "5ecefc7615be55fd8984f36d2dc7cf43.mp3",
+			"image": "belly.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "chest",
+			"my_word": "胸部",
+			"description": "",
+			"audio": "2c371a797fd07db2987c96d60b1af69a.mp3",
+			"image": "chest.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "leg",
+			"my_word": "腿",
+			"description": "",
+			"audio": "a56e440466ef6a8bf8bce184a99e7927.mp3",
+			"image": "leg.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "a lower leg",
+			"my_word": "小腿",
+			"description": "",
+			"audio": "4fad852d87be952e048fa197be2a2e82.mp3",
+			"image": "小腿_1734326427364.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "knee",
+			"my_word": "膝盖",
+			"description": "",
+			"audio": "15a1d379308b8348cc8314b8fa6794c6.mp3",
+			"image": "knee.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "foot",
+			"my_word": "脚",
+			"description": "",
+			"audio": "de0e5145d61086f0422867f72f4bba4a.mp3",
+			"image": "foot.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Toe",
+			"my_word": "脚趾",
+			"description": "",
+			"audio": "05b00960d276c5ac01413b7102fcf819.mp3",
+			"image": "脚趾_1734326378185.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "neck",
+			"my_word": "脖子",
+			"description": "",
+			"audio": "2025-12-30-102530_132900.mp3",
+			"image": "neck.png"
+		  }
+		]
+    },
+    {
+      "id": "1859190044552831977",
+      "name": "颜色",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "red",
+			"my_word": "红色",
+			"description": "",
+			"audio": "ae9c090cef42f9f66d32797d3a072d01.mp3",
+			"image": "red.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "orange",
+			"my_word": "橙色",
+			"description": "",
+			"audio": "aac5402a6fd85da049751f2439e5fd76.mp3",
+			"image": "orange.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "yellow",
+			"my_word": "黄色",
+			"description": "",
+			"audio": "11346372cdac5cb069cf8e0744d8c523.mp3",
+			"image": "yellow.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "green",
+			"my_word": "绿色",
+			"description": "",
+			"audio": "05899f5c3e15c2668e0ebd296f487ba2.mp3",
+			"image": "green.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "cyan",
+			"my_word": "青色",
+			"description": "",
+			"audio": "2025-12-30-164947_125678.mp3",
+			"image": "a5687a7b-0295-496f-999e-94dad8c00157_1733635886324.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "blue",
+			"my_word": "蓝色",
+			"description": "",
+			"audio": "f2c2d613181e79c5874890a91217ceb6.mp3",
+			"image": "blue.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Purple",
+			"my_word": "紫色",
+			"description": "",
+			"audio": "32937edaecab4b5db6c14d86a50a2ee0.mp3",
+			"image": "purple.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "grey",
+			"my_word": "灰色",
+			"description": "",
+			"audio": "7a76ffe8e7c16b9e5282aab3587fc262.mp3",
+			"image": "gray.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Pink",
+			"my_word": "粉色",
+			"description": "",
+			"audio": "32f5cd8a381209711bfeefed97265578.mp3",
+			"image": "pink.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "black",
+			"my_word": "黑色",
+			"description": "",
+			"audio": "30fb7dcaddda6442e4f213fb1b77b7c1.mp3",
+			"image": "black.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "white",
+			"my_word": "白色",
+			"description": "",
+			"audio": "f8e7fbc3c3633ea57d451939da962184.mp3",
+			"image": "white.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "brown",
+			"my_word": "棕色",
+			"description": "",
+			"audio": "ee9887a958e985c1f549fac21d2c2bec.mp3",
+			"image": "brown.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "golden",
+			"my_word": "金色",
+			"description": "",
+			"audio": "2025-12-30-164013_112040.mp3",
+			"image": "gold.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "silvery",
+			"my_word": "银色",
+			"description": "",
+			"audio": "2025-12-30-163953_155663.mp3",
+			"image": "silver.png"
+		  }
+		]
+    },
+    {
+      "id": "1859190044552830977",
+      "name": "形状",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "square",
+			"my_word": "正方形",
+			"description": "",
+			"audio": "96cd3c54e6d97471ed8b559a1b0a4c22.mp3",
+			"image": "zfx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "rectangle",
+			"my_word": "长方形",
+			"description": "",
+			"audio": "ce47dd87636dd8b8f3ec9245650b39de.mp3",
+			"image": "cfx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "triangle",
+			"my_word": "三角形",
+			"description": "",
+			"audio": "7a1d269eabe65b2b0cc82527946d9aa1.mp3",
+			"image": "sjx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "quadrilateral",
+			"my_word": "四边形",
+			"description": "",
+			"audio": "8d88ef29c32dd186bed487489a7bca86.mp3",
+			"image": "sbx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "pentagon",
+			"my_word": "五边形",
+			"description": "",
+			"audio": "6cf5ab4f140ae8caec599fa93d6ca42f.mp3",
+			"image": "wbx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "hexagon",
+			"my_word": "六边形",
+			"description": "",
+			"audio": "bebccf1d156ffe409f527da483c998f7.mp3",
+			"image": "lbx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "diamond",
+			"my_word": "菱形",
+			"description": "",
+			"audio": "c357a3ce4589b26c875aba715a75e58f.mp3",
+			"image": "lx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "trapezoid",
+			"my_word": "梯形",
+			"description": "",
+			"audio": "d08573399865494b1d138b50d7a2f282.mp3",
+			"image": "tx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sector",
+			"my_word": "扇形",
+			"description": "",
+			"audio": "7ccb8a3ad366e19c65476a7b089e8788.mp3",
+			"image": "sx.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "rotundity",
+			"my_word": "圆形",
+			"description": "",
+			"audio": "a23745da341bc7ee756eb738e10d2cc0.mp3",
+			"image": "cd57ba69-6aab-48c5-b535-98a4749e866d_1733636145736.png"
+		  }
+		]
+    },
+    {
+      "id": "1859155394283323393",
+      "name": "玩具",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "tumbler",
+			"my_word": "不倒翁",
+			"description": "",
+			"audio": "4cd39a8454f8123a6e56b8ca5c506731.mp3",
+			"image": "tumbler.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "doll",
+			"my_word": "娃娃",
+			"description": "",
+			"audio": "e14cb1d4ffc5d272c10f7911bfb4e8c8.mp3",
+			"image": "娃娃_1734410713068.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "robot",
+			"my_word": "机器人",
+			"description": "",
+			"audio": "54a04e38dc50e0f06a7b62bab7ba3b62.mp3",
+			"image": "机器人_1734410698818.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Toy car",
+			"my_word": "玩具车",
+			"description": "",
+			"audio": "e15758fefab9dbf5efa867de2cef04c8.mp3",
+			"image": "玩具车_1734410678783.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Building blocks",
+			"my_word": "积木",
+			"description": "",
+			"audio": "78778ef7cf5344261415cbfa35b63f85.mp3",
+			"image": "积木_1734410649377.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Jigsaw puzzle",
+			"my_word": "拼图",
+			"description": "",
+			"audio": "baf03e13b5bdaf5a841c163866d9d712.mp3",
+			"image": "拼图_1734410635664.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "teddy bear",
+			"my_word": "泰迪熊",
+			"description": "",
+			"audio": "a01281a2ff11f8bc864723dbfbd2bce5.mp3",
+			"image": "泰迪熊_1734410618531.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "kite",
+			"my_word": "风筝",
+			"description": "",
+			"audio": "b19a0dcbc89246370a903beaf23d57ef.mp3",
+			"image": "风筝_1734410568718.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Scooter",
+			"my_word": "滑板车",
+			"description": "",
+			"audio": "9b9c16e7bd8b814dbff05a512814e9b1.mp3",
+			"image": "滑板车_1734410532454.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Skate",
+			"my_word": "滑板",
+			"description": "",
+			"audio": "29109c23d74532388004f167082c83b4.mp3",
+			"image": "滑板_1734410521190.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "football",
+			"my_word": "足球",
+			"description": "",
+			"audio": "2025-12-30-184629_176868.mp3",
+			"image": "球_1734410500650.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Water gun",
+			"my_word": "水枪",
+			"description": "",
+			"audio": "bac684d997ca55fc0f36d04e2faaaadb.mp3",
+			"image": "水枪_1734410488060.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "balloon",
+			"my_word": "气球",
+			"description": "",
+			"audio": "025fb17ff0e6cb479425d62c50fc945e.mp3",
+			"image": "气球_1734410452370.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "top",
+			"my_word": "陀螺",
+			"description": "",
+			"audio": "92c14449ae2da7ce3e704eb95738ddfa.mp3",
+			"image": "陀螺_1734410441020.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Trojan",
+			"my_word": "木马",
+			"description": "",
+			"audio": "1dc5328c949abcf8150be457acbf7541.mp3",
+			"image": "trojan.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "rattle-drum",
+			"my_word": "拨浪鼓",
+			"description": "",
+			"audio": "44559b94be81b9ed6bcd42756cbf3163.mp3",
+			"image": "a-drum-shaped-rattle.png"
+		  }
+		]
+    },
+    {
+      "id": "1859189481098420225",
+      "name": "蔬菜",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "Carrot",
+			"my_word": "胡萝卜",
+			"description": "",
+			"audio": "d1805044684ad2b66f94ae36f71c6aaf.mp3",
+			"image": "胡萝卜_1733983480161.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Chinese cabbage",
+			"my_word": "白菜",
+			"description": "",
+			"audio": "8a68146ab4626d30317bd058e481a6a0.mp3",
+			"image": "白菜_1733983457155.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Spinach",
+			"my_word": "菠菜",
+			"description": "",
+			"audio": "229f15cd0cfdebf89ffa8420ca3f05d8.mp3",
+			"image": "菠菜_1733983440868.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "cucumber",
+			"my_word": "黄瓜",
+			"description": "",
+			"audio": "c6ac6ef06f4371d45b243e1623c89167.mp3",
+			"image": "黄瓜_1733983422998.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "potato",
+			"my_word": "土豆",
+			"description": "",
+			"audio": "f97b2a2eae45ccd7801a65ebd1cb04c0.mp3",
+			"image": "土豆_1733983400081.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sweet potato",
+			"my_word": "红薯",
+			"description": "",
+			"audio": "c67b6623c577bc628c0a86c95ffbfbe5.mp3",
+			"image": "红薯_1733983386273.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Celery",
+			"my_word": "芹菜",
+			"description": "",
+			"audio": "e0af7bfcf0532b7485b452f1d08670a0.mp3",
+			"image": "芹菜_1733983367314.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "radish",
+			"my_word": "萝卜",
+			"description": "",
+			"audio": "262c842b66c8d8d1dc344cc7ca8d8aeb.mp3",
+			"image": "萝卜_1733983351461.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Tomatoes",
+			"my_word": "西红柿",
+			"description": "",
+			"audio": "a5a138249ebb7240a6c5c51140f33f4c.mp3",
+			"image": "西红柿_1733983329982.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "eggplant",
+			"my_word": "茄子",
+			"description": "",
+			"audio": "bb38eeaaf08d24e50e37516860fc1f52.mp3",
+			"image": "茄子_1733983310320.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Pumpkin",
+			"my_word": "南瓜",
+			"description": "",
+			"audio": "6f26f811e488e292a3f5192b9bbb23ae.mp3",
+			"image": "南瓜_1733983064695.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Winter melon",
+			"my_word": "冬瓜",
+			"description": "",
+			"audio": "5918400e462de1511dc546111f1af05a.mp3",
+			"image": "冬瓜_1733983046151.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "onion",
+			"my_word": "洋葱",
+			"description": "",
+			"audio": "d576b8a1db0e31c98bc59e3419b1d473.mp3",
+			"image": "洋葱_1733982989306.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Pepper",
+			"my_word": "辣椒",
+			"description": "",
+			"audio": "54f77ca305d15fd0873bc7e6a5aa3d38.mp3",
+			"image": "辣椒_1733982946901.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Mushroom",
+			"my_word": "蘑菇",
+			"description": "",
+			"audio": "02cc56b991bef859c31273d73e49cf82.mp3",
+			"image": "蘑菇_1733982931539.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "broccoli",
+			"my_word": "西蓝花",
+			"description": "",
+			"audio": "6a877a6a1892e637b8179eddb46360bb.mp3",
+			"image": "西蓝花_1733982909040.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Corn",
+			"my_word": "玉米",
+			"description": "",
+			"audio": "a6ab5bad28fa54bfd67b81073a8485f4.mp3",
+			"image": "玉米_1734234895296.png"
+		  }
+		]
+    },
+    {
+      "id": "1859189569443045378",
+      "name": "水果",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "Apple",
+			"my_word": "苹果",
+			"description": "",
+			"audio": "00aea64dab7c84dcb98ef9a84c92de6c.mp3",
+			"image": "苹果_1733809735212.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "kiwifruit",
+			"my_word": "猕猴桃",
+			"description": "",
+			"audio": "bbb6557115134ac28b97c91ab13cdaf7.mp3",
+			"image": "泥猴桃_1733809678136.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Grape",
+			"my_word": "葡萄",
+			"description": "",
+			"audio": "90f43b02013a3d6150be4fe29235be29.mp3",
+			"image": "葡萄_1733809659159.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Banana",
+			"my_word": "香蕉",
+			"description": "",
+			"audio": "f213c2156563bf4f5be429b000e0e229.mp3",
+			"image": "香蕉_1733809643740.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "watermelon",
+			"my_word": "西瓜",
+			"description": "",
+			"audio": "78986bf9cf70c0065a30dbabf92516df.mp3",
+			"image": "西瓜_1733809611817.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "strawberry",
+			"my_word": "草莓",
+			"description": "",
+			"audio": "1108d4e0ec2aee6d4bbf5f94f3ece00e.mp3",
+			"image": "strawberry.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "orange",
+			"my_word": "橙子",
+			"description": "",
+			"audio": "aac5402a6fd85da049751f2439e5fd76.mp3",
+			"image": "橙子_1733809572201.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "grapefruit",
+			"my_word": "柚子",
+			"description": "",
+			"audio": "ef431d222d8640e8ad7bbd28bab885ce.mp3",
+			"image": "柚子_1733809558006.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "plum",
+			"my_word": "李子",
+			"description": "",
+			"audio": "5d803bf6407626e7d9e9551624028494.mp3",
+			"image": "李子_1733809540854.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Peach",
+			"my_word": "桃子",
+			"description": "",
+			"audio": "39dfefee53318695613fe8a1dba8bf21.mp3",
+			"image": "桃子_1733809525767.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "pomegranate",
+			"my_word": "石榴",
+			"description": "",
+			"audio": "534c14f154adb077c7d4ea1efb33a6ab.mp3",
+			"image": "石榴_1733809512279.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Persimmon",
+			"my_word": "柿子",
+			"description": "",
+			"audio": "4bcea96669479daae8acdf419e112a1b.mp3",
+			"image": "柿子_1733809496815.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "pineapple",
+			"my_word": "菠萝",
+			"description": "",
+			"audio": "4f829bc8e0424dea2bff34039b68a9d0.mp3",
+			"image": "菠萝_1733809418048.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Blueberries",
+			"my_word": "蓝莓",
+			"description": "",
+			"audio": "18bdb00c0b6041baf2109f66c750fb15.mp3",
+			"image": "蓝莓_1733809404345.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Durian",
+			"my_word": "榴莲",
+			"description": "",
+			"audio": "d72f25550c15f83bfaa638bfee171b33.mp3",
+			"image": "榴莲_1733809388261.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Mango",
+			"my_word": "芒果",
+			"description": "",
+			"audio": "287b0cc4bbbd532c1d9ac6ab8b86c0b5.mp3",
+			"image": "芒果_1733809371188.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Passion fruit",
+			"my_word": "百香果",
+			"description": "",
+			"audio": "8c53f2cd200cee794de9566ab2e105b6.mp3",
+			"image": "百香果_1733809352606.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Papaya",
+			"my_word": "木瓜",
+			"description": "",
+			"audio": "d5edfe25b9dd7978df8afe49bd3dae88.mp3",
+			"image": "木瓜_1733809323143.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "litchi",
+			"my_word": "荔枝",
+			"description": "",
+			"audio": "487ef4d0d3d2f44b75c5e77ce32b4ce0.mp3",
+			"image": "荔枝_1733809338328.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "cherry",
+			"my_word": "樱桃",
+			"description": "",
+			"audio": "b8fbeb2785c9bec40bf14af73eb96e73.mp3",
+			"image": "cherry.png"
+		  }
+		]
+    },
+    {
+      "id": "1903637077661085698",
+      "name": "动物",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "deer",
+			"my_word": "鹿",
+			"description": "",
+			"audio": "dd49593c8bc0b6cf0f824d3c5e8906ad.mp3",
+			"image": "deer.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "elephant",
+			"my_word": "大象",
+			"description": "",
+			"audio": "ab9be3c72c4fe36d74a5bb7e702b5e38.mp3",
+			"image": "elephant.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "lion",
+			"my_word": "狮子",
+			"description": "",
+			"audio": "a39a48ee68956389a29dbac8cae39a86.mp3",
+			"image": "lion.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "tiger",
+			"my_word": "老虎",
+			"description": "",
+			"audio": "ce752e85153377a1928740bacb829d61.mp3",
+			"image": "tiger.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "leopard",
+			"my_word": "豹",
+			"description": "",
+			"audio": "c1502669c02a8301205770f25246ecb2.mp3",
+			"image": "leopard.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "rhinoceros",
+			"my_word": "犀牛",
+			"description": "",
+			"audio": "e7a9ffc690b6e71eb7963fbac2a86692.mp3",
+			"image": "rhinoceros.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "ostrich",
+			"my_word": "鸵鸟",
+			"description": "",
+			"audio": "9408f149d5044c1bedcf873cb09a00a0.mp3",
+			"image": "ostrich.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "swan",
+			"my_word": "天鹅",
+			"description": "",
+			"audio": "56dcdacc74208c61f10a2d561e832180.mp3",
+			"image": "swan.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "crocodile",
+			"my_word": "鳄鱼",
+			"description": "",
+			"audio": "877d3937f21d88a7b5de8656a9e20368.mp3",
+			"image": "crocodile.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "penguin",
+			"my_word": "企鹅",
+			"description": "",
+			"audio": "14b7de5d873fbb9beb1b1fd933eea123.mp3",
+			"image": "penguin.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "panda",
+			"my_word": "熊猫",
+			"description": "",
+			"audio": "776fb18627f78f608f0f775a26a8b640.mp3",
+			"image": "panda.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "snake",
+			"my_word": "蛇",
+			"description": "",
+			"audio": "2951b4231bc77a1fea8676e388d818cf.mp3",
+			"image": "snake.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "hippo",
+			"my_word": "河马",
+			"description": "",
+			"audio": "e9e95036bd6ef21b7c691353df6a1e33.mp3",
+			"image": "hippo.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "fox",
+			"my_word": "狐狸",
+			"description": "",
+			"audio": "6c0861ccc3508f5e22050cf1cc0eeede.mp3",
+			"image": "fox.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "kangaroo",
+			"my_word": "袋鼠",
+			"description": "",
+			"audio": "62b50acb4fc5e06c6f6143cad9f9a288.mp3",
+			"image": "kangaroo.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "owl",
+			"my_word": "猫头鹰",
+			"description": "",
+			"audio": "7270dc64be6708530f25acf5cd45952b.mp3",
+			"image": "owl.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "parrot",
+			"my_word": "鹦鹉",
+			"description": "",
+			"audio": "eb24fc1b851d9fc1ca80f84b153f805e.mp3",
+			"image": "parrot.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "peacock",
+			"my_word": "孔雀",
+			"description": "",
+			"audio": "d3736cf90356f748635602facb0ba4e4.mp3",
+			"image": "peacock.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "bear",
+			"my_word": "熊",
+			"description": "",
+			"audio": "f01ef7b13ef30fa2bdbcbacae18eec14.mp3",
+			"image": "bear.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "giraffe",
+			"my_word": "长颈鹿",
+			"description": "",
+			"audio": "e355c1ad41a1930b1f25c8f30afbc521.mp3",
+			"image": "giraffe.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sloth",
+			"my_word": "树懒",
+			"description": "",
+			"audio": "4cca2c531b7701ac9ab2bb1dd2f84565.mp3",
+			"image": "sloth.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "wolf",
+			"my_word": "狼",
+			"description": "",
+			"audio": "56de70ded6d3f25bc83378599ef2b44d.mp3",
+			"image": "wolf.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Chameleon",
+			"my_word": "变色龙",
+			"description": "",
+			"audio": "f5cdf0d7c933ffccd1707056a7dc7882.mp3",
+			"image": "chameleon.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "king cobra",
+			"my_word": "眼镜王蛇",
+			"description": "",
+			"audio": "4418ad43d53c48e6db4fe4fa1221466f.mp3",
+			"image": "king-cobra.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "pangolin",
+			"my_word": "穿山甲",
+			"description": "",
+			"audio": "3371b35879bd4f8b4aa7df72608c0502.mp3",
+			"image": "pangolin.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "alpaca",
+			"my_word": "羊驼",
+			"description": "",
+			"audio": "cf5836735588cb537b619915f64d2d3d.mp3",
+			"image": "alpaca.jpg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "rabbit",
+			"my_word": "兔子",
+			"description": "",
+			"audio": "23759fdebfd1d29702650fade3194371.mp3",
+			"image": "rabbit.jpg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "centipede",
+			"my_word": "蜈蚣",
+			"description": "",
+			"audio": "7bc78b0268f652800f06f282ea10e360.mp3",
+			"image": "centipede.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "camel",
+			"my_word": "骆驼",
+			"description": "",
+			"audio": "ed445e91d8f771278aa1324ea0d99d89.mp3",
+			"image": "camel.jpg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "zebra",
+			"my_word": "斑马",
+			"description": "",
+			"audio": "a80ec37c849397058ee8a9c9db606249.mp3",
+			"image": "zebra.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "monkey",
+			"my_word": "猴子",
+			"description": "",
+			"audio": "ae344396be22d218e6c053afa13084f1.mp3",
+			"image": "monkey.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Gorilla",
+			"my_word": "大猩猩",
+			"description": "",
+			"audio": "8a461dda33d80e6155dc94847475ad8b.mp3",
+			"image": "gorilla.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "eagle",
+			"my_word": "老鹰",
+			"description": "",
+			"audio": "2ef08d4636df0190e92628b42fd1bbb3.mp3",
+			"image": "eagle.jpeg"
+		  }
+		]
+    },
+    {
+      "id": "1903637190915682306",
+      "name": "水族馆",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "a squid",
+			"my_word": "乌贼",
+			"description": "",
+			"audio": "ddd2f2e1dc54176e2c504310dfb4c751.mp3",
+			"image": "a-squid.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Sea lions",
+			"my_word": "海狮",
+			"description": "",
+			"audio": "7ba66d475250edb92648725b99412911.mp3",
+			"image": "sea-lions.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "octopus",
+			"my_word": "章鱼",
+			"description": "",
+			"audio": "ad750bd018b5cab7b4e34aa0ebfe73fe.mp3",
+			"image": "octopus.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "jellyfish",
+			"my_word": "水母",
+			"description": "",
+			"audio": "6b058f6c02f0f3b3874115ce20cf77dd.mp3",
+			"image": "jellyfish.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "dolphin",
+			"my_word": "海豚",
+			"description": "",
+			"audio": "bb05f60d59758fcc9e02381238ed39cc.mp3",
+			"image": "dolphin.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "seal",
+			"my_word": "海豹",
+			"description": "",
+			"audio": "14eb5ee9cb53bbb25267ae3c73710204.mp3",
+			"image": "seal.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sea anemone",
+			"my_word": "海葵",
+			"description": "",
+			"audio": "bfe02582dde5904e9a2345d8bee81ff5.mp3",
+			"image": "sea-anemone.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "shark",
+			"my_word": "鲨鱼",
+			"description": "",
+			"audio": "1ac9162d589b20e979d7f5ad9d4bc24a.mp3",
+			"image": "shark.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sea turtle",
+			"my_word": "海龟",
+			"description": "",
+			"audio": "fee11c75c71a52f1226e6fc51a22cca7.mp3",
+			"image": "sea-turtle.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "seahorse",
+			"my_word": "海马",
+			"description": "",
+			"audio": "7de7cb05cf98d21ed3ba19a545dc729e.mp3",
+			"image": "seahorse.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "shellfish",
+			"my_word": "贝类",
+			"description": "",
+			"audio": "0de172ffb1af68a6dd55ccd1e270eea4.mp3",
+			"image": "shellfish.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "killer whale",
+			"my_word": "虎鲸",
+			"description": "",
+			"audio": "a93971e350f9d4b4e39a79d3d65a0723.mp3",
+			"image": "killer-whale.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "white whale",
+			"my_word": "白鲸",
+			"description": "",
+			"audio": "f75ce4b75574f4e462acb2f5af22cce6.mp3",
+			"image": "white-whale.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "humpback",
+			"my_word": "座头鲸",
+			"description": "",
+			"audio": "e0cc6ba40b8da198efc249bb96c5125f.mp3",
+			"image": "humpback.jpg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "nautilus",
+			"my_word": "鹦鹉螺",
+			"description": "",
+			"audio": "b6df11fc47b02b161cbb5b54c517ea11.mp3",
+			"image": "nautilus.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "lobster",
+			"my_word": "龙虾",
+			"description": "",
+			"audio": "b3b8590950bc01aa0d569fb36beb03c6.mp3",
+			"image": "lobster.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "starfish",
+			"my_word": "海星",
+			"description": "",
+			"audio": "511b9b78895df8480113a1ed04227928.mp3",
+			"image": "starfish.jpg"
+		  }
+		]
+    },
+    {
+      "id": "1859191254332710913",
+      "name": "零食",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "ice cream",
+			"my_word": "冰激凌",
+			"description": "",
+			"audio": "0c1e8471efa0e3e9ba604ef0dec84245.mp3",
+			"image": "e6bef16e-1736-4ae6-b6c7-52659ef36da4_1733463504189.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "candy",
+			"my_word": "糖果",
+			"description": "",
+			"audio": "0fd1796450bcebf8a60af35fd81d6bc0.mp3",
+			"image": "9a9e273e-4d29-4bbf-9cb0-3bc9405ab34a_1733463483344.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Chocolates",
+			"my_word": "巧克力",
+			"description": "",
+			"audio": "d14127de1469a24de75c9e8ad21bc4f1.mp3",
+			"image": "3dec7157-bc37-426f-8cc6-57c6365917a1_1733463465248.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "spun sugar",
+			"my_word": "棉花糖",
+			"description": "",
+			"audio": "b065592d8d6e39db20a8055ecb50dda5.mp3",
+			"image": "56e21ce1-8fa2-421b-9988-5e9e4eb23a00_1733463448325.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "lollipop",
+			"my_word": "棒棒糖",
+			"description": "",
+			"audio": "7b5bd3565822da6b289729b8d99678a3.mp3",
+			"image": "f8b6e601-f873-4793-ab8b-b487183400b5_1733463429522.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "sandwich biscuits",
+			"my_word": "夹心饼干",
+			"description": "",
+			"audio": "c19cac3d8dda0180ae8cc2bf372ce1b0.mp3",
+			"image": "b43ace56-e256-4d1f-a0a7-c5a97e684a40_1733463353478.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Cookies",
+			"my_word": "曲奇",
+			"description": "",
+			"audio": "6916d3247ccb54506e2a2bd527ad7d66.mp3",
+			"image": "3756ab04-2745-4d06-b682-2465a8c4394a_1733463316332.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "biscuit",
+			"my_word": "饼干",
+			"description": "",
+			"audio": "917896ed084b6b8142c066f668d560f8.mp3",
+			"image": "7e3ad9f3-9de9-4bfa-b9fb-93b0634c2549_1733463296713.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Potato chips",
+			"my_word": "薯片",
+			"description": "",
+			"audio": "b304ffe3072235f58abc378b68eda95d.mp3",
+			"image": "薯片_1734334024177.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Chicken rolls",
+			"my_word": "蛋卷",
+			"description": "",
+			"audio": "39d6813d0f0972be35a6669261567e66.mp3",
+			"image": "chicken-rolls.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "popcorn",
+			"my_word": "爆米花",
+			"description": "",
+			"audio": "17f4fa92a953f860029f7d04511280eb.mp3",
+			"image": "popcorn.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "jelly",
+			"my_word": "果冻",
+			"description": "",
+			"audio": "64a7fe9bc4dd2074e5c5f6fab30763bf.mp3",
+			"image": "jelly.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "peanut",
+			"my_word": "花生",
+			"description": "",
+			"audio": "585e8228eae3d2239f6c3f1215f0b15d.mp3",
+			"image": "780_副本_1733450601381.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Raisins",
+			"my_word": "葡萄干",
+			"description": "",
+			"audio": "943ad14a856130dece0cc15bf51ee418.mp3",
+			"image": "ptg_1733203240729.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "nut",
+			"my_word": "坚果",
+			"description": "",
+			"audio": "a08ace73417a39599d7095fba5a30909.mp3",
+			"image": "nut_1748010720889.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Chestnuts",
+			"my_word": "栗子",
+			"description": "",
+			"audio": "f7e7ea4eba2089e2a9dc9f01af0417b0.mp3",
+			"image": "chestnuts_1748010549732.png"
+		  }
+		]
+    },
+    {
+      "id": "1859189406624358402",
+      "name": "食物",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "rice",
+			"my_word": "米饭",
+			"description": "",
+			"audio": "4eb927cabadc32c42fce2ab89dd76cf4.mp3",
+			"image": "米饭_1734235004261.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "noodle",
+			"my_word": "面条",
+			"description": "",
+			"audio": "b711b0e027fa56287bc64725efb355a0.mp3",
+			"image": "面条_1734234991442.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Dumplings",
+			"my_word": "饺子",
+			"description": "",
+			"audio": "6d4d593c860e02cf6c5aa38dc2992b39.mp3",
+			"image": "饺子_1734234976118.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "meat",
+			"my_word": "肉",
+			"description": "",
+			"audio": "f5bb08cd2755298305bc52634d3ce746.mp3",
+			"image": "肉_1734234964010.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "egg",
+			"my_word": "蛋",
+			"description": "",
+			"audio": "63bc96351973539f15159b32a1109dd0.mp3",
+			"image": "蛋_1734234949995.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "milk",
+			"my_word": "牛奶",
+			"description": "",
+			"audio": "2a39ed7bdd27c619b0a147980e912c3b.mp3",
+			"image": "牛奶_1734334094929.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Drinks",
+			"my_word": "饮料",
+			"description": "",
+			"audio": "afb2c854d1f932fc8e8be4cc833f8699.mp3",
+			"image": "饮料_1734334116805.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "bread",
+			"my_word": "面包",
+			"description": "",
+			"audio": "48a22e5cb317bd8f0cb2485999cd7a4a.mp3",
+			"image": "面包_1734234909910.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "beef",
+			"my_word": "牛肉",
+			"description": "",
+			"audio": "b2dbd6e305dbe77e019955a87a95764a.mp3",
+			"image": "牛肉_1734234881742.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "chicken",
+			"my_word": "鸡肉",
+			"description": "",
+			"audio": "029dd9fc4d239c6e39cac522e0fa5837.mp3",
+			"image": "鸡肉_1734234865698.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Ham sausage",
+			"my_word": "火腿肠",
+			"description": "",
+			"audio": "4c7e9c84da15bf075dbcdba27b05dcf1.mp3",
+			"image": "火腿肠_1734234851062.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "fish",
+			"my_word": "鱼",
+			"description": "",
+			"audio": "f9669b07409ad9efc0583d74aa1f3385.mp3",
+			"image": "鱼_1734234835431.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "shrimp",
+			"my_word": "虾",
+			"description": "",
+			"audio": "074a015fb4dde68684eec1c51118d546.mp3",
+			"image": "虾_1734234817696.png"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Cake",
+			"my_word": "蛋糕",
+			"description": "",
+			"audio": "e7727f72339362f8afe24c55406c579c.mp3",
+			"image": "蛋糕_1734234682400.png"
+		  }
+		]
+    },
+    {
+      "id": "1903636965253738498",
+      "name": "游乐场",
+      "terms": [
+		  {
+			"abbreviation": "",
+			"learn_word": "slide",
+			"my_word": "滑梯",
+			"description": "",
+			"audio": "0e51ee19ae77bffffbd59b15e95caa2b.mp3",
+			"image": "slide.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "seesaw",
+			"my_word": "跷跷板",
+			"description": "",
+			"audio": "260db48e41bb01b98b55d9dfd4437d08.mp3",
+			"image": "seesaw.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Trampoline",
+			"my_word": "蹦床",
+			"description": "",
+			"audio": "5085f35fd954cae318104a374fc6661b.mp3",
+			"image": "trampoline.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Roller Coaster",
+			"my_word": "过山车",
+			"description": "",
+			"audio": "2a37d51ea038b076ff2f43357bd27d4b.mp3",
+			"image": "roller-coaster.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "merry-go-round",
+			"my_word": "旋转木马",
+			"description": "",
+			"audio": "bc1b5744ef3c71b557bb5e16914f189b.mp3",
+			"image": "merry-go-round.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "Ferris wheel",
+			"my_word": "摩天轮",
+			"description": "",
+			"audio": "54b7d1ec88c3ea3c1acf7dec796df6fb.mp3",
+			"image": "ferris-wheel.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "bumper car",
+			"my_word": "碰碰车",
+			"description": "",
+			"audio": "12995d3120970df1268909d70847ccf8.mp3",
+			"image": "bumper-car.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "kart",
+			"my_word": "卡丁车",
+			"description": "",
+			"audio": "088f3e9884b4fc0cdf85a8c51f38e5d6.mp3",
+			"image": "kart.jpeg"
+		  },
+		  {
+			"abbreviation": "",
+			"learn_word": "swing",
+			"my_word": "秋千",
+			"description": "",
+			"audio": "f01132e9fb6f6c47dc533a3699e90988.mp3",
+			"image": "swing.jpeg"
+		  }
+		]
+    }
+  ]
+}
