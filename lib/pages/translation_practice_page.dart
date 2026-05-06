@@ -122,7 +122,10 @@ class _TranslationPracticePageState extends State<TranslationPracticePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('翻译练习 (${_currentIndex + 1}/${_questions.length})'),
+        title: Text(
+          '翻译练习 (${_currentIndex + 1}/${_questions.length})',
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),

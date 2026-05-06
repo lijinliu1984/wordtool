@@ -30,7 +30,10 @@ class _PracticeDetailPageState extends State<PracticeDetailPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('$typeLabel - 答题详情'),
+        title: Text(
+          '$typeLabel - 答题详情',
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: _loadDetails(),

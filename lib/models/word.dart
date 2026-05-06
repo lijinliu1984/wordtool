@@ -7,7 +7,6 @@ class Word {
   final String? description;
   final String? audio;
   final String? image;
-  final bool hasAudioFile;
 
   Word({
     this.id,
@@ -18,7 +17,6 @@ class Word {
     this.description,
     this.audio,
     this.image,
-    this.hasAudioFile = false,
   });
 
   Map<String, dynamic> toMap() {
@@ -44,7 +42,6 @@ class Word {
       description: map['description'] as String?,
       audio: map['audio'] as String?,
       image: map['image'] as String?,
-      hasAudioFile: false,
     );
   }
 
@@ -57,7 +54,6 @@ class Word {
     String? description,
     String? audio,
     String? image,
-    bool? hasAudioFile,
   }) {
     return Word(
       id: id ?? this.id,
@@ -68,7 +64,6 @@ class Word {
       description: description ?? this.description,
       audio: audio ?? this.audio,
       image: image ?? this.image,
-      hasAudioFile: hasAudioFile ?? this.hasAudioFile,
     );
   }
 }

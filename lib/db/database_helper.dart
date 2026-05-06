@@ -44,6 +44,10 @@ class DatabaseHelper {
         my_word TEXT NOT NULL,
         description TEXT,
         audio TEXT,
+        gif TEXT,
+        net_audio TEXT,
+        net_image TEXT,
+        net_gif TEXT,
         image TEXT
       )
     ''');

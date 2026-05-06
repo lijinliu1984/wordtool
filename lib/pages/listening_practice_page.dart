@@ -1,10 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 import '../db/database_helper.dart';
 import '../models/word.dart';
+import '../utils/resource_helper.dart';
+import '../widgets/smart_image.dart';
 import 'practice_result_page.dart';
 
 class ListeningPracticePage extends StatefulWidget {
@@ -36,12 +36,7 @@ class _ListeningPracticePageState extends State<ListeningPracticePage> {
     super.initState();
     _questions =
         widget.words
-            .where(
-              (w) =>
-                  w.audio != null &&
-                  w.audio!.isNotEmpty &&
-                  File(w.audio!).existsSync(),
-            )
+            .where((w) => ResourceHelper.sourceExists(w.audio))
             .toList()
           ..shuffle();
     if (_questions.isNotEmpty) {
@@ -72,11 +67,14 @@ class _ListeningPracticePageState extends State<ListeningPracticePage> {
   }
 
   Future<void> _playCurrentAudio() async {
-    final path = _questions[_currentIndex].audio;
-    if (path != null && path.isNotEmpty) {
+    final source = _questions[_currentIndex].audio;
+    if (source != null && source.isNotEmpty) {
       try {
         await _audioPlayer.stop();
-        await _audioPlayer.play(DeviceFileSource(path));
+        final src = ResourceHelper.isUrl(source)
+            ? UrlSource(source)
+            : DeviceFileSource(source);
+        await _audioPlayer.play(src);
       } catch (e) {
         debugPrint('播放失败: $e');
       }
@@ -152,39 +150,16 @@ class _ListeningPracticePageState extends State<ListeningPracticePage> {
       return _buildTextOption(word.myWord);
     }
 
-    final hasImage =
-        word.image != null &&
-        word.image!.isNotEmpty &&
-        File(word.image!).existsSync();
-
-    if (hasImage) {
-      return ClipRRect(
-        borderRadius: BorderRadius.circular(8),
-        child: SizedBox(
-          width: 80,
-          height: 80,
-          child: Image.file(
-            File(word.image!),
-            fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) {
-              return _buildDefaultImage();
-            },
-          ),
-        ),
-      );
-    }
-    return _buildDefaultImage();
-  }
-
-  Widget _buildDefaultImage() {
-    return Container(
-      width: 80,
-      height: 80,
-      decoration: BoxDecoration(
-        color: Colors.grey[300],
-        borderRadius: BorderRadius.circular(8),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8),
+      child: SmartImage(
+        source: word.image,
+        width: 80,
+        height: 80,
+        fit: BoxFit.cover,
+        memCacheWidth: 80,
+        memCacheHeight: 80,
       ),
-      child: const Icon(Icons.image, size: 40, color: Colors.grey),
     );
   }
 
@@ -209,7 +184,10 @@ class _ListeningPracticePageState extends State<ListeningPracticePage> {
       return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.mode == 'image' ? '听力练习A' : '听力练习B'),
+          title: Text(
+            widget.mode == 'image' ? '听力练习A' : '听力练习B',
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
         body: const Center(
           child: Text(
@@ -227,6 +205,7 @@ class _ListeningPracticePageState extends State<ListeningPracticePage> {
         title: Text(
           '${widget.mode == 'image' ? '听力练习A' : '听力练习B'} '
           '(${_currentIndex + 1}/${_questions.length})',
+          overflow: TextOverflow.ellipsis,
         ),
       ),
       body: Padding(

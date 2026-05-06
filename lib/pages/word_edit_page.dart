@@ -8,6 +8,8 @@ import 'package:path_provider/path_provider.dart';
 
 import '../db/database_helper.dart';
 import '../models/word.dart';
+import '../utils/resource_helper.dart';
+import '../widgets/smart_image.dart';
 
 class WordEditPage extends StatefulWidget {
   final Word word;
@@ -23,6 +25,8 @@ class _WordEditPageState extends State<WordEditPage> {
   late final TextEditingController _myWordController;
   late final TextEditingController _descriptionController;
   late final TextEditingController _abbreviationController;
+  late final TextEditingController _imageUrlController;
+  late final TextEditingController _audioUrlController;
 
   String? _imagePath;
   String? _audioPath;
@@ -39,8 +43,25 @@ class _WordEditPageState extends State<WordEditPage> {
     _abbreviationController = TextEditingController(
       text: widget.word.abbreviation ?? '',
     );
-    _imagePath = widget.word.image;
-    _audioPath = widget.word.audio;
+
+    final image = widget.word.image;
+    if (ResourceHelper.isUrl(image)) {
+      _imageUrlController = TextEditingController(text: image);
+      _imagePath = null;
+    } else {
+      _imageUrlController = TextEditingController();
+      _imagePath = image;
+    }
+
+    final audio = widget.word.audio;
+    if (ResourceHelper.isUrl(audio)) {
+      _audioUrlController = TextEditingController(text: audio);
+      _audioPath = null;
+    } else {
+      _audioUrlController = TextEditingController();
+      _audioPath = audio;
+    }
+
     _resolveCacheDir();
   }
 
@@ -50,19 +71,45 @@ class _WordEditPageState extends State<WordEditPage> {
     _myWordController.dispose();
     _descriptionController.dispose();
     _abbreviationController.dispose();
+    _imageUrlController.dispose();
+    _audioUrlController.dispose();
     super.dispose();
   }
 
-  Future<void> _resolveCacheDir() async {
-    if (_imagePath != null && _imagePath!.isNotEmpty) {
-      setState(() {
-        _cacheDir = path.dirname(_imagePath!);
-      });
-      return;
-    }
+  String? get _effectiveImage => _imageUrlController.text.trim().isNotEmpty
+      ? _imageUrlController.text.trim()
+      : _imagePath;
+
+  String? get _effectiveAudio => _audioUrlController.text.trim().isNotEmpty
+      ? _audioUrlController.text.trim()
+      : _audioPath;
+
+  String get _audioLabel {
+    final url = _audioUrlController.text.trim();
+    if (url.isNotEmpty) return url;
     if (_audioPath != null && _audioPath!.isNotEmpty) {
+      return ResourceHelper.isUrl(_audioPath!)
+          ? _audioPath!
+          : path.basename(_audioPath!);
+    }
+    return '未选择音频';
+  }
+
+  Future<void> _resolveCacheDir() async {
+    String? localPath;
+    if (_imagePath != null &&
+        _imagePath!.isNotEmpty &&
+        !ResourceHelper.isUrl(_imagePath)) {
+      localPath = _imagePath;
+    } else if (_audioPath != null &&
+        _audioPath!.isNotEmpty &&
+        !ResourceHelper.isUrl(_audioPath)) {
+      localPath = _audioPath;
+    }
+
+    if (localPath != null) {
       setState(() {
-        _cacheDir = path.dirname(_audioPath!);
+        _cacheDir = path.dirname(localPath!);
       });
       return;
     }
@@ -113,6 +160,7 @@ class _WordEditPageState extends State<WordEditPage> {
 
     setState(() {
       _imagePath = destPath;
+      _imageUrlController.clear();
     });
   }
 
@@ -131,6 +179,7 @@ class _WordEditPageState extends State<WordEditPage> {
 
     setState(() {
       _audioPath = destPath;
+      _audioUrlController.clear();
     });
   }
 
@@ -144,8 +193,8 @@ class _WordEditPageState extends State<WordEditPage> {
       abbreviation: _abbreviationController.text.isEmpty
           ? null
           : _abbreviationController.text,
-      image: _imagePath,
-      audio: _audioPath,
+      image: _effectiveImage,
+      audio: _effectiveAudio,
     );
 
     await DatabaseHelper.instance.updateWord(updatedWord);
@@ -188,27 +237,11 @@ class _WordEditPageState extends State<WordEditPage> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   clipBehavior: Clip.antiAlias,
-                  child: _imagePath != null && _imagePath!.isNotEmpty
-                      ? Image.file(
-                          File(_imagePath!),
-                          fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
-                            return const Center(
-                              child: Icon(
-                                Icons.broken_image,
-                                size: 50,
-                                color: Colors.grey,
-                              ),
-                            );
-                          },
-                        )
-                      : const Center(
-                          child: Icon(
-                            Icons.add_photo_alternate,
-                            size: 50,
-                            color: Colors.grey,
-                          ),
-                        ),
+                  child: SmartImage(
+                    source: _effectiveImage,
+                    fit: BoxFit.cover,
+                    defaultIcon: Icons.add_photo_alternate,
+                  ),
                 ),
               ),
             ),
@@ -220,22 +253,40 @@ class _WordEditPageState extends State<WordEditPage> {
                 label: const Text('选择并裁剪图片'),
               ),
             ),
+            const SizedBox(height: 4),
+            TextField(
+              controller: _imageUrlController,
+              decoration: const InputDecoration(
+                labelText: '或输入图片URL',
+                hintText: 'https://...',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+              onChanged: (_) => setState(() {}),
+            ),
             const SizedBox(height: 24),
 
             // 音频
             Card(
               child: ListTile(
                 leading: const Icon(Icons.audiotrack),
-                title: Text(
-                  _audioPath != null && _audioPath!.isNotEmpty
-                      ? path.basename(_audioPath!)
-                      : '未选择音频',
-                ),
+                title: Text(_audioLabel),
                 trailing: TextButton(
                   onPressed: _pickAudio,
                   child: const Text('更换'),
                 ),
               ),
+            ),
+            const SizedBox(height: 4),
+            TextField(
+              controller: _audioUrlController,
+              decoration: const InputDecoration(
+                labelText: '或输入音频URL',
+                hintText: 'https://...',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+              onChanged: (_) => setState(() {}),
             ),
             const SizedBox(height: 24),
 

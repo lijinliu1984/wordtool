@@ -49,6 +49,14 @@ A cross-platform vocabulary learning app built with Flutter, supporting Android,
 |:---:|
 | ![Download QR](readme/download_QRCode_420.png) |
 
+## Netdisk Download
+
+| Baidu Netdisk | Quark Netdisk |
+|:---:|:---:|
+| 启蒙英语 | 启蒙英语 |
+| [Open Link](https://pan.baidu.com/s/1_JmHDARtSg87IlTvLa8V0w?pwd=fmDC) | [Open Link](https://pan.quark.cn/s/a75f5fd91c77?pwd=SzGm) |
+| Code: `fmDC` | Code: `SzGm` |
+
 ## Data Import
 
 The app supports batch importing word banks via a JSON file. The JSON can specify relative paths for audio and image files, which will be automatically copied to the app's cache directory during import.

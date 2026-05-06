@@ -1,10 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 import '../db/database_helper.dart';
 import '../models/word.dart';
+import '../utils/resource_helper.dart';
+import '../widgets/smart_image.dart';
 import 'practice_result_page.dart';
 
 class DictationPracticePage extends StatefulWidget {
@@ -36,12 +36,7 @@ class _DictationPracticePageState extends State<DictationPracticePage> {
     if (widget.mode == 'audio') {
       _questions =
           widget.words
-              .where(
-                (w) =>
-                    w.audio != null &&
-                    w.audio!.isNotEmpty &&
-                    File(w.audio!).existsSync(),
-              )
+              .where((w) => ResourceHelper.sourceExists(w.audio))
               .toList()
             ..shuffle();
       if (_questions.isNotEmpty) _playCurrentAudio();
@@ -77,11 +72,14 @@ class _DictationPracticePageState extends State<DictationPracticePage> {
   }
 
   Future<void> _playCurrentAudio() async {
-    final path = _questions[_currentIndex].audio;
-    if (path != null && path.isNotEmpty) {
+    final source = _questions[_currentIndex].audio;
+    if (source != null && source.isNotEmpty) {
       try {
         await _audioPlayer.stop();
-        await _audioPlayer.play(DeviceFileSource(path));
+        final src = ResourceHelper.isUrl(source)
+            ? UrlSource(source)
+            : DeviceFileSource(source);
+        await _audioPlayer.play(src);
       } catch (e) {
         debugPrint('播放失败: $e');
       }
@@ -182,24 +180,15 @@ class _DictationPracticePageState extends State<DictationPracticePage> {
           ],
         );
       case 'image':
-        final hasImage =
-            word.image != null &&
-            word.image!.isNotEmpty &&
-            File(word.image!).existsSync();
         return ClipRRect(
           borderRadius: BorderRadius.circular(12),
-          child: SizedBox(
+          child: SmartImage(
+            source: word.image,
             width: 120,
             height: 120,
-            child: hasImage
-                ? Image.file(
-                    File(word.image!),
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return _buildDefaultImage();
-                    },
-                  )
-                : _buildDefaultImage(),
+            fit: BoxFit.cover,
+            memCacheWidth: 120,
+            memCacheHeight: 120,
           ),
         );
       case 'text':
@@ -221,22 +210,13 @@ class _DictationPracticePageState extends State<DictationPracticePage> {
     }
   }
 
-  Widget _buildDefaultImage() {
-    return Container(
-      color: Colors.grey[300],
-      child: const Center(
-        child: Icon(Icons.image, size: 48, color: Colors.grey),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     if (_questions.isEmpty) {
       return Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(_modeTitle),
+          title: Text(_modeTitle, overflow: TextOverflow.ellipsis),
         ),
         body: Center(
           child: Text(
@@ -251,7 +231,10 @@ class _DictationPracticePageState extends State<DictationPracticePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('$_modeTitle (${_currentIndex + 1}/${_questions.length})'),
+        title: Text(
+          '$_modeTitle (${_currentIndex + 1}/${_questions.length})',
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),

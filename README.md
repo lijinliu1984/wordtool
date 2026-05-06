@@ -49,6 +49,14 @@
 |:---:|
 | ![下载二维码](readme/download_QRCode_420.png) |
 
+## 网盘下载
+
+| 百度网盘 | 夸克网盘 |
+|:---:|:---:|
+| 启蒙英语 | 启蒙英语 |
+| [打开链接](https://pan.baidu.com/s/1_JmHDARtSg87IlTvLa8V0w?pwd=fmDC) | [打开链接](https://pan.quark.cn/s/a75f5fd91c77?pwd=SzGm) |
+| 提取码: `fmDC` | 提取码: `SzGm` |
+
 ## 数据导入
 
 应用支持通过 JSON 文件批量导入词库，JSON 中可同时指定音频和图片的相对路径，导入时会自动将媒体文件复制到应用缓存目录。

@@ -8,11 +8,15 @@ import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 
+import '../update/update_service.dart';
+import '../update/update_dialog.dart';
 import '../db/database_helper.dart';
 import '../models/folder.dart';
 import '../models/word.dart';
 import 'practice_history_page.dart';
 import 'word_grid_page.dart';
+import 'info_page.dart';
+import 'about_page.dart';
 
 class FolderGridPage extends StatefulWidget {
   final String? parentId;
@@ -369,7 +373,43 @@ class _FolderGridPageState extends State<FolderGridPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title ?? '疯码单词助手'),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (widget.isRoot)
+              PopupMenuButton<String>(
+                icon: const Icon(Icons.more_vert),
+                tooltip: '更多',
+                onSelected: (value) {
+                  switch (value) {
+                    case 'info':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const InfoPage()),
+                      );
+                      break;
+                    case 'about':
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const AboutPage()),
+                      );
+                      break;
+                  }
+                },
+                itemBuilder: (context) => [
+                  const PopupMenuItem(value: 'info', child: Text('说明')),
+                  const PopupMenuItem(value: 'about', child: Text('关于')),
+                ],
+              ),
+            Flexible(
+              child: Text(
+                widget.title ?? '疯码单词助手',
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+              ),
+            ),
+          ],
+        ),
         actions: widget.isRoot
             ? [
                 Padding(

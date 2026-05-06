@@ -1,10 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 import '../db/database_helper.dart';
 import '../models/word.dart';
+import '../utils/resource_helper.dart';
+import '../widgets/smart_image.dart';
 import 'word_edit_page.dart';
 import 'translation_practice_page.dart';
 import 'listening_practice_page.dart';
@@ -43,21 +43,17 @@ class _WordGridPageState extends State<WordGridPage> {
   }
 
   Future<List<Word>> _loadWords(String foldId) async {
-    final words = await DatabaseHelper.instance.getWordsByFolderId(foldId);
-    return words.map((word) {
-      final exists =
-          word.audio != null &&
-          word.audio!.isNotEmpty &&
-          File(word.audio!).existsSync();
-      return word.copyWith(hasAudioFile: exists);
-    }).toList();
+    return DatabaseHelper.instance.getWordsByFolderId(foldId);
   }
 
-  Future<void> _playAudio(String filePath, int wordId) async {
+  Future<void> _playAudio(String source, int wordId) async {
     try {
       await _audioPlayer.stop();
       _playingWordId.value = wordId;
-      await _audioPlayer.play(DeviceFileSource(filePath));
+      final src = ResourceHelper.isUrl(source)
+          ? UrlSource(source)
+          : DeviceFileSource(source);
+      await _audioPlayer.play(src);
     } catch (e) {
       debugPrint('播放失败: $e');
       _playingWordId.value = null;
@@ -273,40 +269,17 @@ class _WordGridPageState extends State<WordGridPage> {
     }
   }
 
-  Widget _buildImage(String? imagePath) {
-    if (imagePath != null && imagePath.isNotEmpty) {
-      return Image.file(
-        File(imagePath),
-        fit: BoxFit.cover,
-        errorBuilder: (context, error, stackTrace) {
-          return _buildDefaultImage();
-        },
-      );
-    }
-    return _buildDefaultImage();
-  }
-
-  Widget _buildDefaultImage() {
-    return Image.asset(
-      'assets/default_word.png',
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          color: Colors.grey[300],
-          child: const Center(
-            child: Icon(Icons.image, size: 40, color: Colors.grey),
-          ),
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title ?? '单词列表'),
+        title: Text(
+          widget.title ?? '单词列表',
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
+        ),
         actions: [
           ElevatedButton(
             onPressed: () => _showPracticeMenu(context),
@@ -344,11 +317,8 @@ class _WordGridPageState extends State<WordGridPage> {
             itemCount: words.length,
             itemBuilder: (context, index) {
               final word = words[index];
-              final hasAudio = word.hasAudioFile;
-              final hasImage =
-                  word.image != null &&
-                  word.image!.isNotEmpty &&
-                  File(word.image!).existsSync();
+              final hasAudio = ResourceHelper.sourceExists(word.audio);
+              final hasImage = ResourceHelper.sourceExists(word.image);
 
               debugPrint(
                 'Word[${word.id}] learnWord=${word.learnWord}, '
@@ -380,7 +350,14 @@ class _WordGridPageState extends State<WordGridPage> {
                                 child: SizedBox(
                                   width: 72,
                                   height: 72,
-                                  child: _buildImage(word.image),
+                                  child: SmartImage(
+                                    source: word.image,
+                                    width: 72,
+                                    height: 72,
+                                    fit: BoxFit.cover,
+                                    memCacheWidth: 72,
+                                    memCacheHeight: 72,
+                                  ),
                                 ),
                               ),
                             if (hasImage) const SizedBox(width: 12),
