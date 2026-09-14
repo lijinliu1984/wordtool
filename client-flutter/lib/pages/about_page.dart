@@ -81,6 +81,32 @@ class AboutPage extends StatelessWidget {
               ),
             ),
 
+            // 开源地址
+            _buildCard(
+              context: context,
+              title: '开源地址',
+              child: Column(
+                children: [
+                  _buildLinkRow(
+                    label: 'GitHub',
+                    text: 'lijinliu1984/wordtool',
+                    url: 'https://github.com/lijinliu1984/wordtool',
+                  ),
+                  const SizedBox(height: 14),
+                  _buildLinkRow(
+                    label: 'Gitee',
+                    text: 'tiez/fmcode-wordtool',
+                    url: 'https://gitee.com/tiez/fmcode-wordtool',
+                  ),
+                  const SizedBox(height: 14),
+                  const Text(
+                    '项目完全开源，欢迎提交 Issue 与 Pull Request。',
+                    style: TextStyle(fontSize: 13, color: Colors.grey, height: 1.5),
+                  ),
+                ],
+              ),
+            ),
+
             // 素材来源
             // _buildCard(
             //   context: context,
