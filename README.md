@@ -1,12 +1,19 @@
 # 疯码单词助手
 
-一个基于 Flutter 开发的跨平台背单词应用，支持 Android、iOS、Windows、macOS、Linux 和 Web。采用"目录 → 分类 → 单词"三级结构管理词库，内置多种练习模式帮助记忆。
+## 项目简介
+
+疯码单词助手是一款开源的跨平台背单词应用，采用 **Flutter 客户端 + Rust 服务端** 的前后端分离架构：
+
+- **客户端**（Flutter）：支持 Android、iOS、Windows、macOS、Linux 和 Web，负责界面交互与本地学习数据管理
+- **服务端**（Rust + axum）：负责词库分发、版本管理与图片/音频等静态资源托管
+
+应用采用"学段 → 分类 → 单词"三级结构管理词库，内置多种练习模式，并通过「练习 → 测试 → 复习」的学习闭环帮助高效记忆单词。
 
 ## 功能特点
 
-- **三级词库管理**：目录九宫格导航 → 分类列表 → 单词详情，结构清晰
-- **多媒体支持**：每个单词可关联音频（听力）和图片（图像记忆）
-- **批量导入**：选择包含 JSON + 媒体文件的文件夹，一键导入完整词库
+- **三级词库管理**：学段 → 分类 → 单词，逐级浏览词库，结构清晰
+- **多媒体支持**：每个单词可关联音频（听力）和图片（图像记忆），资源由服务端托管、客户端按需加载
+- **词库在线更新**：启动后检查服务端词库版本，有更新时一键下载替换，无需重装应用
 - **六种练习模式**：
   - 翻译练习（看学习词选母语词）
   - 听力练习 A（听音频选图片）
@@ -15,17 +22,89 @@
   - 默写练习 B（看图片输入学习词）
   - 默写练习 C（看母语词输入学习词）
 - **练习记录**：自动保存每次练习的正确率与每题明细，支持历史回顾
-- **数据本地存储**：基于 SQLite，所有数据保存在本地，无需联网
+- **学习数据本地存储**：任务与练习记录基于 SQLite 保存在本地，词库、图片、音频由服务端提供
 
-## 界面预览
+## 客户端界面预览
 
-| 首页目录 | 单词列表 | 练习菜单 |
+| 首页 | 首页（学习进行中） | 单词广场 |
 |:---:|:---:|:---:|
-| ![首页](readme/home.png) | ![单词列表](readme/word_list.png) | ![练习菜单](readme/pracctice_list.png) |
+| ![首页](images/client-home.png) | ![首页-学习进行中](images/client-home-show-test-button.png) | ![单词广场](images/client-word-square.png) |
 
-| 听力练习 | 练习记录 | 记录详情 |
+| 全部分类 | 分类单词列表 | 创建任务 |
 |:---:|:---:|:---:|
-| ![听力练习](readme/pracctice_listen.png) | ![练习记录](readme/pracctice_history.png) | ![记录详情](readme/pracctice_history_detail.png) |
+| ![全部分类](images/client-hot-classify.png) | ![分类单词列表](images/client-word-list.png) | ![创建任务](images/client-create-task.png) |
+
+| 单词练习 | 今日单词 | 单词消消乐 |
+|:---:|:---:|:---:|
+| ![单词练习](images/client-word-practice.png) | ![今日单词](images/client-word-practice-end.png) | ![单词消消乐](images/client-word-game.png) |
+
+| 默写测试 | 测试结果 | 练习记录 |
+|:---:|:---:|:---:|
+| ![默写测试](images/client-word-testing.png) | ![测试结果](images/client-word-test-result.png) | ![练习记录](images/client-word-practice-record-list.png) |
+
+## 服务端
+
+服务端基于 **Rust + [axum](https://github.com/tokio-rs/axum)** 实现，为客户端提供词库分发与静态资源托管。
+
+### 接口
+
+| 接口 | 说明 |
+|------|------|
+| `GET /api/version?version_code={n}` | 词库版本检查。读取 `version_info` 表的最新版本号与客户端对比，返回是否有更新及更新内容 |
+| `GET /api/download` | 词库下载。返回完整的 `vocabulary_study.db` 文件，客户端下载后替换本地词库 |
+| `POST /api/word/image` | 单词图片上传。以 multipart 接收 `word_id` 与 `file`，将裁剪后的 PNG 写入 `resources/pic`，同时更新词库中的图片字段 |
+| `GET /resources/{filename}` | 静态资源托管。提供单词图片与音频文件，由客户端按需加载 |
+
+### 配置
+
+服务端通过环境变量配置，未设置时使用默认值：
+
+| 环境变量 | 默认值 | 说明 |
+|---------|--------|------|
+| `HOST` | `0.0.0.0` | 监听地址 |
+| `PORT` | `3002` | 监听端口 |
+| `DB_PATH` | `sqlite/vocabulary_study.db` | 词库数据库路径 |
+| `RESOURCES_DIR` | `resources` | 静态资源目录 |
+| `DB_VERSION` | `1.0.0` | 词库版本号 |
+
+### 运行
+
+```bash
+cd server--rust
+cargo build --release
+cd target/release
+./wordtool-server          # Linux / macOS，Windows 下为 wordtool-server.exe
+```
+
+运行目录下需包含词库与资源目录：
+
+```
+target/release/
+├── wordtool-server(.exe)
+├── sqlite/
+│   └── vocabulary_study.db   # 词库数据库
+└── resources/
+    ├── pic/                  # 单词图片
+    └── audio/                # 单词音频
+```
+
+### 运行截图
+
+| 启动服务 | 词库数据库 |
+|:---:|:---:|
+| ![启动服务](images/server-start.png) | ![词库数据库](images/server-sqlite-path.png) |
+
+| 图片资源目录 | 音频资源目录 |
+|:---:|:---:|
+| ![图片资源目录](images/server-pic-path.png) | ![音频资源目录](images/server-audio-path.png) |
+
+### 客户端连接自建服务端
+
+如果你自己部署了服务端，可以在客户端「首页右上角设置 → 服务器地址」中填写自己启动的服务地址（例如 `http://192.168.1.60:3002`），点击「测试连接」确认连通后保存。修改后所有接口请求都会使用新地址；客户端默认连接 `https://wt.fmcode.top`。
+
+| 服务器地址 |
+|:---:|
+| ![服务器地址](images/client-edit-serverUrl.png) |
 
 ## 安装说明
 
@@ -49,103 +128,25 @@
 |:---:|
 | ![下载二维码](readme/download_QRCode_420.png) |
 
-## 网盘下载
+## 音频下载
+
+应用使用的单词音频由**阿里云百炼（CosyVoice）**语音合成模型生成，可通过以下网盘下载：
 
 | 百度网盘 | 夸克网盘 |
 |:---:|:---:|
-| 启蒙英语 | 启蒙英语 |
-| [打开链接](https://pan.baidu.com/s/1_JmHDARtSg87IlTvLa8V0w?pwd=fmDC) | [打开链接](https://pan.quark.cn/s/a75f5fd91c77?pwd=SzGm) |
-| 提取码: `fmDC` | 提取码: `SzGm` |
+| 音频资源 | 音频资源 |
+| [打开链接](https://pan.baidu.com/s/1dAJIgtLt7IIegjy9dDSRtA?pwd=3dr2) | [打开链接](https://pan.quark.cn/s/017d948ddff6?pwd=iKev) |
+| 提取码: `3dr2` | 提取码: `iKev` |
 
-## 数据导入
+## 数据来源与说明
 
-应用支持通过 JSON 文件批量导入词库，JSON 中可同时指定音频和图片的相对路径，导入时会自动将媒体文件复制到应用缓存目录。
+| 内容 | 来源 | 是否提供下载 |
+|------|------|------------|
+| 单词数据 | 整理自开源英汉词典项目 [ECDict](https://github.com/skywind3000/ECDict)（MIT 协议），含音标、释义、柯林斯/牛津标注、BNC/COCA 词频等 | 随词库分发 |
+| 单词音频 | 使用阿里云百炼（CosyVoice）模型合成 | 提供，见上方「音频下载」 |
+| 单词图片 | 测试阶段从网络获取，仅用于功能测试与演示 | **不提供下载** |
 
-### JSON 格式模板
-
-```json
-{
-  "name": "游戏开发",
-  "version": "1.0",
-  "categories": [
-    {
-      "id": "general",
-      "name": "通用游戏开发术语",
-      "terms": [
-        {
-          "abbreviation": "",
-          "learn_word": "Game Loop",
-          "my_word": "游戏循环",
-          "description": "每帧更新逻辑、渲染的核心循环",
-          "audio": "game_loop_en.mp3",
-          "image": "game_loop.png"
-        }
-      ]
-    },
-    {
-      "id": "programming",
-      "name": "编程相关（通用）",
-      "terms": [
-        {
-          "abbreviation": "",
-          "learn_word": "Variable",
-          "my_word": "变量",
-          "description": "存储数据",
-          "audio": "variable_en.mp3",
-          "image": "variable.png"
-        }
-      ]
-    }
-  ]
-}
-```
-
-### 字段说明
-
-| 字段 | 说明 |
-|------|------|
-| `name` | 词库名称（作为根目录名称） |
-| `categories` | 分类数组，每个分类作为一个子目录 |
-| `id` | 分类唯一标识 |
-| `name` | 分类显示名称 |
-| `terms` | 单词数组 |
-| `abbreviation` | 缩写（可选） |
-| `learn_word` | 要学习的单词 |
-| `my_word` | 母语释义 |
-| `description` | 补充描述（可选） |
-| `audio` | 音频文件相对路径（不可为空，无音频可填任意占位文件名） |
-| `image` | 图片文件相对路径（不可为空，无图片可填任意占位文件名） |
-
-### 快速生成词库
-
-你可以使用 DeepSeek、ChatGPT 等 AI 工具生成词库数据。参考提示词：
-
-> 帮我整理 30 个常用的德语单词，并生成 JSON 格式数据，JSON 格式内容如下：
-> ```json
-> {
->   "name": "德语基础词汇",
->   "version": "1.0",
->   "categories": [
->     {
->       "id": "daily",
->       "name": "日常生活",
->       "terms": [
->         {
->           "abbreviation": "",
->           "learn_word": "Haus",
->           "my_word": "房子",
->           "description": "名词，中性",
->           "audio": "haus_de.mp3",
->           "image": "haus.png"
->         }
->       ]
->     }
->   ]
-> }
-> ```
-> 其中 audio 和 image 不要空值，用英文命名。
-
-将 JSON 文件和所有媒体文件放在同一个文件夹中，点击应用首页「导入」按钮选择该文件夹即可。
+> 项目中所使用的图片仅用于功能测试与演示，版权归原作者所有，本项目不分发、也不提供下载。正式使用请自行替换为拥有合法授权的素材。
 
 ## 联系方式
 
@@ -157,13 +158,27 @@
 
 ## 技术栈
 
+### 客户端（Flutter）
+
 - [Flutter](https://flutter.dev/) - 跨平台 UI 框架
-- [sqflite](https://pub.dev/packages/sqflite) - SQLite 数据库
+- [sqflite](https://pub.dev/packages/sqflite) - 本地 SQLite 数据库
+- [dio](https://pub.dev/packages/dio) - HTTP 请求
 - [audioplayers](https://pub.dev/packages/audioplayers) - 音频播放
-- [file_picker](https://pub.dev/packages/file_picker) - 文件选择
-- [path_provider](https://pub.dev/packages/path_provider) - 路径管理
-- [uuid](https://pub.dev/packages/uuid) - 唯一标识生成
+- [record](https://pub.dev/packages/record) - 录音（跟读练习）
+- [cached_network_image](https://pub.dev/packages/cached_network_image) - 网络图片加载与缓存
+- [image_picker](https://pub.dev/packages/image_picker) - 图片选择 / 拍照
+- [image](https://pub.dev/packages/image) - 图片裁剪
+- [shared_preferences](https://pub.dev/packages/shared_preferences) - 本地键值存储
+- [permission_handler](https://pub.dev/packages/permission_handler) - 权限申请
+
+### 服务端（Rust）
+
+- [axum](https://github.com/tokio-rs/axum) - Web 框架
+- [tokio](https://tokio.rs/) - 异步运行时
+- [rusqlite](https://github.com/rusqlite/rusqlite) - SQLite 访问
+- [tower-http](https://github.com/tower-rs/tower-http) - 静态资源托管与 CORS
+- [serde](https://serde.rs/) / [serde_json](https://github.com/serde-rs/json) - 序列化
 
 ## 声明
 
-本项目仅供个人学习、研究使用，禁止商用。
+本项目基于 [Boost Software License 1.0](LICENSE) 开源，允许自由使用、修改与商用（含闭源分发）。分发时请保留原始版权声明与许可声明，详见 [LICENSE](LICENSE)。
